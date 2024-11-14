@@ -1,3 +1,10 @@
+This is a test react project for students in DJS. Main points of discussion:
+
+- Creating a react application
+- Installing dependencies
+- Adding components (Header, Main, Contact, Footer)
+- Adding routing with react-router-dom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
