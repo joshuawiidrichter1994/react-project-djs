@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className="Header">
-      <h1>Header1</h1>
+    <div className="header">
+      <h1>Header</h1>
       <Link to="/about">About</Link>
       <Link to="/">Home</Link>
     </div>
