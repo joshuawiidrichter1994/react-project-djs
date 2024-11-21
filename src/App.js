@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './components/Header';
-import Main from './components/Main';
 import About from './components/About';
 import ShowDetails from './components/ShowDetails.js';
 import Footer from './components/Footer';
@@ -12,8 +11,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route path="/show/:id" element={<ShowDetails />} />{' '}
           {/* Add dynamic route */}
         </Routes>
