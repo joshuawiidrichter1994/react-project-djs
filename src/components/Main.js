@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import './Main.css';
+import React, { useEffect, useState } from 'react';
 
 function Main() {
   const [weather, setWeather] = useState(null);
