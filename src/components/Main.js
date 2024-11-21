@@ -12,7 +12,6 @@ function Main() {
         const apiKey = '70bb90db40a4a99461ea11963b348e4a'; // Replace with your actual API key
         const lat = -33.918861; // Latitude for Cape Town
         const lon = 18.4233; // Longitude for Cape Town
-        const exclude = 'minutely,hourly,daily,alerts'; // Exclude unnecessary data
         const response = await fetch(
           `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`
         );
@@ -31,7 +30,7 @@ function Main() {
     };
 
     fetchWeather();
-  }, []); // Empty dependency array means this runs once on component mount
+  }, []);
 
   return (
     <div className="Main">

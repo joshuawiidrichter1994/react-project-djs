@@ -1,29 +1,33 @@
 .About {
-    text-align: center;
     padding: 20px;
+    text-align: center;
   }
   
   .podcast-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create a responsive grid */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items in grid cells */
     margin-top: 20px;
   }
   
-  .podcast-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    overflow: hidden;
+  .podcast-card {
     background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .podcast-item img {
-    width: 100%;
+  .podcast-image {
+    max-width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 8px;
+  }
+  
+  .podcast-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
   }
   
