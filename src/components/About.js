@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './About.css';
 
 function About() {
-  // State to store the podcast data
   const [podcasts, setPodcasts] = useState([]);
 
-  // Fetch the podcast data when the component mounts
   useEffect(() => {
-    // Fetch data from the API
     fetch('https://podcast-api.netlify.app')
       .then((response) => response.json())
       .then((data) => {
-        // Store the podcasts data in the state
         setPodcasts(data);
       })
       .catch((error) => {
@@ -21,8 +18,7 @@ function About() {
 
   return (
     <div className="About">
-      <h1>WFO2407's Podcast app</h1>
-      {/* Conditionally render podcasts */}
+      <h1>About</h1>
       {podcasts.length > 0 ? (
         <div className="podcast-grid">
           {podcasts.map((podcast, index) => (
@@ -32,7 +28,11 @@ function About() {
                 alt={podcast.title}
                 className="podcast-image"
               />
-              <p>{podcast.title}</p>
+              <p>
+                <Link to={`/show/${podcast.id}`} className="podcast-title">
+                  {podcast.title}
+                </Link>
+              </p>
             </div>
           ))}
         </div>
